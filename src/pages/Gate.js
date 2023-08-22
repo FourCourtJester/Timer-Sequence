@@ -15,7 +15,6 @@ function Gate() {
   // States
   const [times, setTimes] = useState([])
   const [started, setStarted] = useState(false)
-  // Refs
 
   const handleBegin = () => setStarted(true)
   const handleRestart = () => setStarted(false)
@@ -33,7 +32,7 @@ function Gate() {
   }, [])
 
   return (
-    <Container className="bg-dark d-flex flex-column justify-content-center text-light text-center p-3 w-100 h-100" fluid>
+    <Container className="d-flex flex-column justify-content-center text-center p-3 w-100 h-100" fluid>
       {started ? <Sequence onFinish={handleRestart} times={times} /> : <Instructions onStart={handleBegin} times={times} />}
     </Container>
   )
