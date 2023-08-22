@@ -20,13 +20,10 @@ function Gate() {
   const handleRestart = () => setStarted(false)
 
   useEffect(() => {
-    if (!params.get('timers')) return () => {}
+    const _times = params.get('timers')
+    if (!_times) return () => {}
 
-    try {
-      setTimes(JSON.parse(params.get('timers')))
-    } catch (err) {
-      console.error(err)
-    }
+    setTimes(_times.split(','))
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])

@@ -15,8 +15,21 @@ body,
   width: 100%;
 }
 
+.btn {
+  --bs-btn-font-size: 15vw;
+  text-transform: uppercase;
+}
+
 .timer {
   font-size: 30vw;
+}
+
+.modal {
+  --bs-modal-width: 100%;
+
+  .modal-content {
+    background-color: rgba(33, 37, 41, 0.33);
+  }
 }
 
 //

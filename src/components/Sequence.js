@@ -1,13 +1,13 @@
 // Import core components
 import { useEffect, useRef, useState } from 'react'
-import { Button } from 'react-bootstrap'
+import { Button, Modal } from 'react-bootstrap'
 import { Fireworks } from '@fireworks-js/react'
 
 // Import our components
 // ...
 
 function createTime(val) {
-  const d = new Date(val).toISOString()
+  const d = new Date(val || 0).toISOString()
   return d.slice(14, -5)
 }
 
@@ -74,15 +74,16 @@ export function Sequence(properties) {
   const { onFinish, times } = properties
   // States
   const [cursor, setCursor] = useState(0)
-  const [pause, setPause] = useState(false)
   const [value, setValue] = useState(NaN)
+  const [show, setShow] = useState(false)
   // Refs
   const $fireworks = useRef()
 
+  const handleClose = () => setShow(false)
   const handleNext = () => setCursor((_cursor) => (_cursor + 1 >= times.length ? -1 : _cursor + 1))
 
   useEffect(() => {
-    setPause(false)
+    setShow(false)
     setValue(cursor >= 0 ? times[cursor] * 60 * 1000 : NaN)
     $fireworks.current.stop()
   }, [cursor, times])
@@ -91,7 +92,7 @@ export function Sequence(properties) {
     if (Number.isNaN(value)) return () => {}
 
     if (value <= 0) {
-      setPause(true)
+      setShow(true)
       $fireworks.current.start()
       return () => {}
     }
@@ -105,21 +106,24 @@ export function Sequence(properties) {
 
   return (
     <>
+      {!show && <span className="timer">{createTime(value)}</span>}
       <Fireworks ref={$fireworks} className="position-absolute z-n1 top-0 start-0 w-100 h-100" options={options} autostart={false} />
-      {Number.isNaN(value) ? (
-        <Button className="w-100" onClick={onFinish}>
-          Restart
-        </Button>
-      ) : (
-        <div className="d-flex flex-column justify-content-center align-items-center">
-          <span className="timer">{createTime(value)}</span>
-          {pause && (
-            <Button className="w-100" onClick={handleNext}>
-              Begin
+      <Modal show={show} backdrop="static" dialogClassName="m-3" centered onHide={handleClose}>
+        <Modal.Body>
+          {cursor + 1 >= times.length ? (
+            <Button className="p-0 w-100" onClick={onFinish}>
+              Restart
             </Button>
+          ) : (
+            <>
+              <Button className="p-0 w-100" onClick={handleNext}>
+                Next
+              </Button>
+              <p className="text-center mt-2 mb-0">Next Timer is {times[cursor + 1]} minutes.</p>
+            </>
           )}
-        </div>
-      )}
+        </Modal.Body>
+      </Modal>
     </>
   )
 }

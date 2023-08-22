@@ -10,7 +10,7 @@ export function Instructions(properties) {
 
   return times.length ? (
     <>
-      <Button className="w-100" onClick={onStart}>
+      <Button className="p-0" onClick={onStart}>
         Begin
       </Button>
       <p className="text-light mt-2 mb-0">
