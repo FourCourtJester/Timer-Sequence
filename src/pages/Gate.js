@@ -1,6 +1,6 @@
 // Import core components
 import { Instructions, Sequence } from 'components'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Container } from 'react-bootstrap'
 
 // Import our components
@@ -33,7 +33,7 @@ function Gate() {
 
   return (
     <Container className="d-flex flex-column justify-content-center text-center p-3 w-100 h-100" fluid>
-      {started ? <Sequence onFinish={handleRestart} times={times} /> : <Instructions onStart={handleBegin} times={times} />}
+      {started ? <Sequence times={times} onFinish={handleRestart} /> : <Instructions times={times} onStart={handleBegin} />}
     </Container>
   )
 }
