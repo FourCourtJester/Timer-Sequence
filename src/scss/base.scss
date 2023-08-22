@@ -1,0 +1,66 @@
+@use "~bootstrap/scss/bootstrap" as bs;
+
+@use "~@fortawesome/fontawesome-free/scss/fontawesome";
+@use "~@fortawesome/fontawesome-free/scss/solid";
+@use "~@fortawesome/fontawesome-free/scss/brands";
+@use "~@fortawesome/fontawesome-free/scss/regular";
+
+//
+// Base
+//
+html,
+body,
+#app {
+  height: 100%;
+  width: 100%;
+}
+
+//
+// Overrides
+//
+
+.border-radius-0 {
+  border-radius: 0;
+}
+
+.overflow {
+  &-x {
+    &-auto {
+      overflow-x: auto;
+    }
+
+    &-hidden {
+      overflow-x: hidden;
+    }
+
+    &-scroll {
+      overflow-x: scroll;
+    }
+  }
+
+  &-y {
+    &-auto {
+      overflow-y: auto;
+    }
+
+    &-hidden {
+      overflow-y: hidden;
+    }
+
+    &-scroll {
+      overflow-y: scroll;
+    }
+  }
+}
+
+.text-nospace {
+  font-size: 0;
+}
+
+.text-prewrap {
+  white-space: pre-wrap;
+}
+
+.text-justified {
+  text-align: justify !important;
+}
