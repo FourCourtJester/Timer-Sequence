@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Timer-Sequence/static/css/main.e9b839d2.css",
-    "main.js": "/Timer-Sequence/static/js/main.d4588a01.js",
-    "static/media/fa-solid-900.ttf": "/Timer-Sequence/static/media/fa-solid-900.d75e3fd1eb12e9bd6655.ttf",
-    "static/media/fa-brands-400.ttf": "/Timer-Sequence/static/media/fa-brands-400.016b4a6cdced82ab3aa1.ttf",
-    "static/media/fa-solid-900.woff2": "/Timer-Sequence/static/media/fa-solid-900.b6879d41b0852f01ed5b.woff2",
-    "static/media/fa-brands-400.woff2": "/Timer-Sequence/static/media/fa-brands-400.878f31251d960bd6266f.woff2",
-    "static/media/fa-regular-400.ttf": "/Timer-Sequence/static/media/fa-regular-400.50701fbb8177c2dde530.ttf",
-    "static/media/fa-regular-400.woff2": "/Timer-Sequence/static/media/fa-regular-400.b041b1fa4fe241b23445.woff2",
-    "index.html": "/Timer-Sequence/index.html",
-    "main.e9b839d2.css.map": "/Timer-Sequence/static/css/main.e9b839d2.css.map",
-    "main.d4588a01.js.map": "/Timer-Sequence/static/js/main.d4588a01.js.map"
+    "main.css": "./static/css/main.8b258589.css",
+    "main.js": "./static/js/main.018d6556.js",
+    "static/media/fa-solid-900.ttf": "./static/media/fa-solid-900.d75e3fd1eb12e9bd6655.ttf",
+    "static/media/fa-brands-400.ttf": "./static/media/fa-brands-400.016b4a6cdced82ab3aa1.ttf",
+    "static/media/fa-solid-900.woff2": "./static/media/fa-solid-900.b6879d41b0852f01ed5b.woff2",
+    "static/media/fa-brands-400.woff2": "./static/media/fa-brands-400.878f31251d960bd6266f.woff2",
+    "static/media/fa-regular-400.ttf": "./static/media/fa-regular-400.50701fbb8177c2dde530.ttf",
+    "static/media/fa-regular-400.woff2": "./static/media/fa-regular-400.b041b1fa4fe241b23445.woff2",
+    "index.html": "./index.html",
+    "main.8b258589.css.map": "./static/css/main.8b258589.css.map",
+    "main.018d6556.js.map": "./static/js/main.018d6556.js.map"
   },
   "entrypoints": [
-    "static/css/main.e9b839d2.css",
-    "static/js/main.d4588a01.js"
+    "static/css/main.8b258589.css",
+    "static/js/main.018d6556.js"
   ]
 }
