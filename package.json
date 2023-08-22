@@ -1,7 +1,7 @@
 {
   "name": "client",
   "version": "0.1.0",
-  "homepage": "https://fourcourtester.github.io/Single-Studio/",
+  "homepage": "https://fourcourtester.github.io/Timer-Sequence/",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.4.2",
